@@ -5,20 +5,20 @@ function charPosition(arr){
 
   var string =arr.join("")
 
-  var position={
-
-  }
+  var position= {};
 
   for(var i=0; i<string.length; i++){
 
     if(string[i] in position){
 
-      position[string[i]].push(i);
+      position[string[i]].count+=1;
+
+      position[string[i]].pos.push(i);
 
 
-    }else{
+    } else{
 
-      position[string[i]]=[i];
+      position[string[i]]={count:1, pos:[i]};
 
     }
 
